@@ -1,0 +1,278 @@
+.nav-wrap {
+	width: 100%;
+	padding: 0 0 12px 0;
+	float: left;
+	background: {
+		image: url(images/lace.png);
+		repeat: repeat-x;
+		position: bottom;
+	}
+
+	@media screen and (min-width: $midwidth) {
+		position: fixed;
+		top: 0;
+		z-index: 9999;
+	}
+	
+	
+	
+}
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	text-align: center;
+	width: 100%;
+	background-color: $color_pink;
+	padding: 10px 0;
+
+	@media screen and (min-width: $midwidth) {
+		text-align: left;
+	}
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		width: 100%;
+
+		@media screen and (min-width: $midwidth) {
+			width: auto;
+		}
+		
+		ul {
+			float: left;
+			z-index: 99999;
+
+			@media screen and (min-width: $midwidth) {
+				position: absolute;
+				top: 1.8em;
+				left: -999em;
+			}
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				position: relative;
+				z-index: 10000;
+				width: 100%;
+				font-size: 14px;
+
+				@media screen and (min-width: $midwidth) {
+					width: auto;
+					font-size: 14px;
+				}
+				@media screen and (min-width: $deskwidth) {
+					font-size: 17px;
+				}
+				@media screen and (min-width: $largewidth) {
+					font-size: 18px;
+				}
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				position: relative;
+				width: 100%;
+				padding: 10px 5px;
+				background-color: $color_pink;
+
+				@media screen and (min-width: $midwidth) {
+					width: 200px;
+				}
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		float: left;
+		position: relative;
+		line-height: 2;
+		margin: 10px auto;
+		font-size: 18px;
+		width: 100%;
+
+		// @media screen and (min-width: $tabwidth) {
+		// 	font-size: 12px;
+		// 	margin: 0 10px 0 0;
+		// }
+		@media screen and (min-width: $midwidth) {
+			width: auto;
+			font-size: 14px;
+			margin: 0 0px 0 0;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 17px;
+			margin: 0 11px 0 0;
+		}
+		@media screen and (min-width: $largewidth) {
+			font-size: 18px;
+			margin: 0 15px 0 0;
+		}
+
+		&:hover > a,
+		&.focus > a {
+			//background-color: rgba(255,255,255,.8);
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: #000;
+		position: relative;
+		padding: 0 10px;
+		
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background-color: $color_dark_pink;
+			visibility: hidden;
+			@include transition(.3s ease all);
+			-webkit-transform: scaleX(0);
+			transform: scaleX(0);
+
+		}
+
+		&:hover:before {
+		  visibility: visible;
+		  -webkit-transform: scaleX(1);
+		  transform: scaleX(1);
+		}
+
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background-color: $color_dark_pink;
+			 visibility: visible;
+		  -webkit-transform: scaleX(1);
+		  transform: scaleX(1);
+
+		}
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	background-color: #444;
+	ul.sub-menu {
+		background-color: rgba(255,255,255,.1);
+	}
+	
+}
+
+
+@media screen and (min-width: $midwidth) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+button.menu-toggle {
+	border: 0px;
+	text-shadow: none;
+	background-color: #444;;
+	color: #fff;
+	box-shadow: none;
+	width: auto;
+	display: inline-block;
+	margin: 10px auto;
+	border-radius: 0;
+	text-transform: uppercase;
+	font: {
+		
+		weight :300;
+		size: 20px;
+	}
+	
+	@media screen and (min-width: $midwidth) {
+		display: none;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+.subnav {
+	width: 100%;
+
+	ul {
+		margin: 0; 
+		padding: 0;
+	}
+	li {
+		margin: 0;
+		list-style: none;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		padding: 5px;
+		color: #000;
+
+		&:hover {
+			background-color: $color_pink;
+		}
+	}
+	h3,h1 {
+		text-transform: uppercase;
+		font: {
+			size: 16px;
+		}
+	}
+}

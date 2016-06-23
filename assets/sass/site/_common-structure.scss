@@ -1,0 +1,222 @@
+
+div {
+	
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.clear {clear: both;}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	clear: both;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 90%;
+		padding: 0px;
+	}
+}
+#page, #secondary {
+	@media screen and (min-width: $tabwidth) {
+		padding-top: 50px;
+	}
+}
+#main-page {
+	
+
+	@media screen and (min-width: $midwidth) {
+		padding-top: 50px;
+	}
+}
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 76%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	overflow: hidden;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 16%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo-page, .logo-page-banner, h1.logo {
+	width: 230px;
+	height: 184px;
+	z-index: 10;
+	position: relative;
+	background: {
+		image: url(images/logo.png);	
+		size: cover;
+	}
+	margin: 10px auto;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 150px;
+		height: 120px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 230px;
+		height: 184px;
+	}
+	@media screen and (min-width: $largewidth) {
+		width: 230px;
+		height: 184px;
+	}
+}
+.logo-page a, .logo-page-banner a, h1.logo a {
+	width: 230px;
+	height: 184px;
+	display: block;
+	text-indent: -9000px;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 150px;
+		height: 120px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 230px;
+		height: 184px;
+	}
+	@media screen and (min-width: $largewidth) {
+		width: 230px;
+		height: 184px;
+	}
+}
+h1.logo {
+	margin: 20px auto;
+
+	@media screen and (min-width: $tabwidth) {
+		margin: 40px 0 0 0;
+		float: left;
+	}
+}
+.logo-page {
+	margin: 20px auto;
+	position: relative;
+	clear: both;
+	@media screen and (min-width: $tabwidth) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
+	@media screen and (min-width: midwidth) {
+		margin: 40px 0 0 0;
+		float: left;
+		clear: none;
+		position: relative;
+	}
+	@media screen and (min-width: $deskwidth) {
+		margin: 40px 0 0 0;
+		position: relative;
+
+	}
+	@media screen and (min-width: $largewidth) {
+		margin: 40px 0 0 0;
+	}
+}
+.logo-page-banner {
+	position: relative;
+	margin: 20px auto;
+	z-index:10;
+
+	@media screen and (min-width: $tabwidth) {
+		position: absolute;
+		margin: 0;
+		top: 0px;
+		left: 5%;
+	}
+	@media screen and (min-width: $midwidth) {
+		top: 40px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		top: 20px;
+	}
+	@media screen and (min-width: $largewidth) {
+		top: 20px;
+	}
+}
+.page-banner {
+	width: 100%;
+	float: left;
+	position: relative;
+	z-index: 10;
+
+	img {
+		width: 100%;
+	}
+}
+.social-header {
+	margin: 20px auto;
+	@media screen and (min-width: $midwidth) {
+		margin: 5px 0 0 0;
+		float: right;
+	}
+}
+.social-footer {
+
+}
+.social {
+	width: auto;
+	
+	display: inline-block;
+
+	i {
+		width: 20px;
+		height: 20px;
+		position: relative;
+		@include transition(all .1s ease);
+		margin: 0 0 0 10px;
+		font-size: 24px;
+
+		&:hover {
+			transform: scale(1.4);
+		}
+
+		a {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+    		top: 0;
+    		left: 0;
+			text-indent: -9000px;
+			display: block;
+			
+			&:hover:before {
+			  visibility: hidden;
+			}
+			
+		}
+	}
+}
+.site-footer {
+	width: 100%;
+	clear: both;
+	margin-top: 30px;
+}
