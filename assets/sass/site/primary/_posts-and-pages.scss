@@ -54,44 +54,7 @@ section.hero {
 		}
 	}
 }
-main#main {
-	background-color: $color_pink;
-	width: 100%;
-	clear: both;
-	padding: 5% 0;
-	position: relative;
-	overflow: hidden;
-	margin: 5% 0;
 
-	.lace-left {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		z-index: 1;
-
-		background: {
-			image: url(images/lace-right.png);
-			repeat: no-repeat;
-			position: bottom 0 left 0;
-		}
-	}
-	.lace-right {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 1;
-		
-		background: {
-			image: url(images/lace-left.png);
-			repeat: no-repeat;
-			position: top 0 right 0;
-		}
-	}
-}
 section.from-the-blog, section.instagram, section.testimonial {
 	width: 100%;
 	position: relative;

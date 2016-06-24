@@ -15,7 +15,9 @@ $pintrest = get_field('pintrest_link', 'option');
 $address = get_field('address', 'option');
 $phone = get_field('phone', 'option');
 $sitemap = get_field('sitemap', 'option');
-$blogname = get_bloginfo('description');
+$mail = get_field('email');
+$email = antispambot($mail);
+$blogname = get_bloginfo('name');
 ?>
 
 	</div><!-- #content -->
@@ -23,7 +25,13 @@ $blogname = get_bloginfo('description');
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
 			<div class="site-info">
-				
+				<?php 
+
+				 echo $blogname . ' • ' . $address . '<br>'; 
+				 echo $phone . ' • <a href="' . $email . '">' . $email . '</a><br>'; 
+				 echo '<a href="' . $sitemap . '">sitemap</a> • site by <a href="http://bellaworksweb.com/">Bellaworks</a>';
+
+				 ?>
 			</div><!-- .site-info -->
 
 			<div class="social social-footer">
