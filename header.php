@@ -54,7 +54,7 @@ $blogname = get_bloginfo('description');
 							<a href="<?php echo $instagram; ?>">instagram</a>
 						</i>
 						<i class="fa fa-2x fa-pinterest-p" aria-hidden="true">
-							<a href="<?php echo $pinterest; ?>">pinterest</a>
+							<a href="<?php echo $pintrest; ?>">pinterest</a>
 						</i>
 					</div><!-- social -->
 

@@ -67,10 +67,10 @@
 					font-size: 14px;
 				}
 				@media screen and (min-width: $deskwidth) {
-					font-size: 17px;
+					font-size: 15px;
 				}
 				@media screen and (min-width: $largewidth) {
-					font-size: 18px;
+					font-size: 17px;
 				}
 				&:hover > ul,
 				&.focus > ul {
@@ -121,12 +121,12 @@
 			margin: 0 0px 0 0;
 		}
 		@media screen and (min-width: $deskwidth) {
-			font-size: 17px;
+			font-size: 15px;
 			margin: 0 11px 0 0;
 		}
 		@media screen and (min-width: $largewidth) {
-			font-size: 18px;
-			margin: 0 15px 0 0;
+			font-size: 17px;
+			margin: 0 6px 0 0;
 		}
 
 		&:hover > a,

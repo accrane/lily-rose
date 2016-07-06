@@ -6,7 +6,9 @@
 	$args = array(
 
 		'child_of' => $parentID, 
-		'title_li' => ''
+		'title_li' => '', 
+		'order' => 'DESC', 
+		'orderby' => 'menu_order'
 
 		); 
 ?>

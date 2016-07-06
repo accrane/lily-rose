@@ -84,6 +84,19 @@ section.testimonial {
 section.instagram {
 	border-radius: 20px;
 	overflow: hidden;
+
+	.instagram-box {
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+		z-index: 50;
+		& a {display:block;}
+	}
+
+	#sb_instagram img, #sb_instagram .sbi_photo {
+		border-radius: 20px;
+	}
+
 }
 .home-post {
 	width: 100%;
@@ -101,6 +114,19 @@ section.instagram {
 		line-height: 0;
 	}
 
+	&:hover {
+		.info {
+			opacity: 1;
+		}
+	}
+	.readmore a {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 30;
+	}
 	.info {
 		width: 100%;
 		height: 100%;
@@ -108,6 +134,10 @@ section.instagram {
 		background-color: rgba(255,255,255,.6);
 		text-align: center;
 		padding: 2%;
+		opacity: 0;
+		position: relative;
+		z-index: 1;
+		@include transition(all .3s ease);
 		font: {
 			family: $font__main;
 			
@@ -116,13 +146,20 @@ section.instagram {
 
 
 		h2 {
-			font-size: 20px
+			font: {
+				size: 20px;
+				family: $font__main;
+			}
+			
 		}
 
 		p {
-			font-size: 13px
+			font: {
+				size: 20px;
+				family: $font__heading;
+			}
 		}
-	}
+	} //  info
 	.post-wrap, .readmore a {
 		width: 100%;
 		height: 100%;
@@ -144,8 +181,9 @@ section.instagram {
 		border-radius: 20px;
 		background-color: rgba(255,255,255,.6);
 		text-align: center;
-		padding: 2%;
+		padding: 2% 2% 10% 2%;
 		position: relative;
+		z-index: 5;
 		font: {
 			family: $font__heading;
 			size: 27px;
@@ -158,6 +196,18 @@ section.instagram {
 		position: absolute;
 		bottom: 5px;
 		left: 40%;
+	}
+	.background {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		& img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 .collection {

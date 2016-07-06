@@ -22,6 +22,15 @@ setup_postdata( $post );
 	$hero = get_field('hero');
 	// picked blog
 	$post_object = get_field('from_the_blog');
+
+	// testimonial bg image
+	$background_image = get_field('background_image');
+
+	// Links
+	$link_blog = get_field('link_blog');
+	$link_instagram = get_field('link_instagram');
+	$link_testimonial = get_field('link_testimonial');
+
  
 wp_reset_postdata();
 
@@ -81,10 +90,11 @@ $size = 'full';
 				    		<h2><?php the_title(); ?></h2>
 				    		<p>READ MORE</p>
 				    	</div>
-				    	<div class="readmore">
-				    		<a href="<?php the_permalink(); ?>">READ MORE</a>
-				    	</div>
+				    	
 			    	</div><!-- post wrap -->
+			    	<div class="readmore">
+			    		<a href="<?php the_permalink(); ?>">READ MORE</a>
+			    	</div>
 			    </div><!-- honme post -->
 
 				<?php endwhile; endif; // post ?>
@@ -93,7 +103,11 @@ $size = 'full';
 
 		<section class="instagram">
 			<h2>@lilyrosebridal</h2>
-			<?php echo do_shortcode('[instagram-feed]'); ?>
+			<div class="instagram-box">
+				<a href="<?php echo $link_instagram; ?>">
+					<?php echo do_shortcode('[instagram-feed]'); ?>
+				</a>
+				</div><!-- instagram box -->
 		</section>
 
 		<section class="testimonial">
@@ -106,9 +120,12 @@ $size = 'full';
 			));
 				if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 				<div class="home-post">
-					<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }  ?>
-					<div class="info-clear"><?php the_content(); ?></div>
-					<div class="swash"></div>
+					
+						<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }  ?>
+						<div class="info-clear"><?php echo get_excerpt(40); ?></div>
+						<div class="swash"></div>
+						<div class="background"><?php echo wp_get_attachment_image( $background_image, $size ); ?></div>
+					<div class="readmore no-dec"><a href="<?php echo $testmonialLink; ?>"></a></div>
 				</div>
 				
 				<?php endwhile; endif; // post ?>

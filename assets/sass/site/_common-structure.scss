@@ -17,11 +17,15 @@ div {
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
+		padding: 0 5%;
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 90%;
-		padding: 0px;
+		padding: 0px 5%;
 	}
+}
+#primary {
+
 }
 #page, #secondary {
 	@media screen and (min-width: $tabwidth) {
@@ -76,6 +80,7 @@ main#main {
 .content-area {
 	width: 100%;
 	margin: 0px auto;
+	overflow: hidden;
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 76%;
@@ -86,7 +91,46 @@ main#main {
 		/*width: 1200px;*/
 	}
 }
-
+.content-area-full {
+	width: 100%;
+	margin: 0px auto;
+	overflow: hidden;
+	
+	@media screen and (min-width: $tabwidth) {
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.contact-area {
+	width: 100%;
+	margin: 0px auto;
+	overflow: hidden;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 33%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.contact-media {
+	width: 100%;
+	margin: 0px auto;
+	overflow: hidden;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 60%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
 .widget-area {
 	width: 100%;
 	margin: 0px auto;

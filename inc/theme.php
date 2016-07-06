@@ -105,6 +105,18 @@ function my_theme_add_editor_styles() {
     add_editor_style( 'editor-style.css' );
 }
 add_action( 'init', 'my_theme_add_editor_styles' );
+
+/*-------------------------------------
+  Custom Excerpt
+---------------------------------------*/
+function get_excerpt($count){
+  // whatever you want to append on the end of the last word
+  $words = '...';
+  $excerpt = get_the_content();
+  $excerpt = strip_tags($excerpt);
+  $excerpt = wp_trim_words($excerpt, $count, $words);
+  return $excerpt;
+}
 /*-------------------------------------
   Change Admin Labels
 ---------------------------------------*/

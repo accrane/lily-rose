@@ -3,8 +3,8 @@
  * Template Name: Experience
  */
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="wrapper">
+	<div id="primary" class="content-area-full">
 		<main id="page" class="site-main" role="main">
 
 			<?php
@@ -22,7 +22,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

@@ -25,7 +25,7 @@
   */
 
 var project             = 'lily-rose'; // Project Name.
-var projecturl          = 'http://localhost:8888/austincrane/ACStarter/'; // Project URL. Could be something like localhost:8888.
+var projecturl          = 'http://localhost:8888/Bellaworks/lily-rose/site/bw/'; // Project URL. Could be something like localhost:8888.
 
 
 var styleSRC            = './assets/sass/style.scss'; // Path to main .scss file.
@@ -127,7 +127,7 @@ var reload       = browserSync.reload; // For manual browser reload.
  		// injectChanges: true,
 
  		// Use a specific port (instead of the one auto-detected by Browsersync).
- 		// port: 7000,
+ 		 port: 8888,
 
  	} );
  });

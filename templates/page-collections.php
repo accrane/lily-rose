@@ -14,42 +14,21 @@ $collections = get_terms( 'collection' );
 
 ?>
 <div class="wrapper">
-	<div id="primary" class="content-area-full">
-		<main id="page" class="site-main" role="main">
-			<div class="content-area">
-				<?php
-					while ( have_posts() ) : the_post();
-
-						get_template_part( 'template-parts/content', 'page' );
-
-					endwhile; // End of the loop.
-				?>
-			</div><!-- content area -->
-				
-			<div class="widget-area">
-				<div class="subnav">
-					<h3>collections</h3>
-					<ul>
-					<?php foreach( $collections as $col ) {
-						$tID = $col->term_id;
-						$link = get_term_link($tID);
-						$image = get_field('logo', 'collection_'.$tID);
-						$size = 'full';
-
-						echo '<li>';
-							echo '<a href="'. $link . '">';
-								echo $col->name;
-						echo '</a></li>';
-						} ?>
-					</ul>
-				</div><!-- subnav -->
-			</div><!-- widget area -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	
 
 	<div id="primary" class="content-area-full">
 		<main id="page" class="site-main" role="main">
+
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div><!-- .entry-content -->
+			</article><!-- #post-## -->
+	
 
 			<section class="collections">
 			<?php 
