@@ -29,7 +29,7 @@ setup_postdata( $post );
 	// Links
 	$link_blog = get_field('link_blog');
 	$link_instagram = get_field('link_instagram');
-	$link_testimonial = get_field('link_testimonial');
+	$testmonialLink = get_field('link_testimonial');
 
  
 wp_reset_postdata();
@@ -125,7 +125,7 @@ $size = 'full';
 						<div class="info-clear"><?php echo get_excerpt(40); ?></div>
 						<div class="swash"></div>
 						<div class="background"><?php echo wp_get_attachment_image( $background_image, $size ); ?></div>
-					<div class="readmore no-dec"><a href="<?php echo $testmonialLink; ?>"></a></div>
+					<div class="readmore no-dec"><a href="<?php echo $testmonialLink; ?>">readmore</a></div>
 				</div>
 				
 				<?php endwhile; endif; // post ?>
