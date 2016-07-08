@@ -3,7 +3,7 @@
  * Template Name: Brides
  */
 get_header(); ?>
-
+<div class="wrapper">
 	<div id="primary" class="content-area">
 		<main id="page" class="site-main" role="main">
 
@@ -22,7 +22,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+	<?php get_sidebar(); ?>
+</div>
+<?php get_footer(); ?>

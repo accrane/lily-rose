@@ -8,9 +8,9 @@
  */
 
 get_header(); ?>
-
+<div class="wrapper">
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="page" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
@@ -26,16 +26,26 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				?>
 
-			endwhile;
+				<div class="blogpost ">
+					<a href="<?php the_permalink(); ?>">
+						<?php if(has_post_thumbnail()) { ?>
+							<div class="image">
+								<?php the_post_thumbnail(); ?>
+							</div>
+						<?php }?>
+						<div class="post-content <?php echo $postClass; ?>">
+							<h2><?php the_title(); ?></h2>
+							<?php the_excerpt(); ?>
+						</div><!-- post content -->
+						<div class="readmore">Read More &raquo;</div>
+					</a>
+				</div><!-- post -->
 
-			the_posts_navigation();
+			<?php endwhile;
+
+			pagi_posts_nav();
 
 		else :
 
@@ -46,6 +56,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+	<?php get_sidebar(); ?>
+</div>
+<?php get_footer(); ?>

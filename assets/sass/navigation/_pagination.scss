@@ -29,7 +29,9 @@
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-	background-color: #FAD827;
+	background-color: $color_pink;
+	border: 1px solid $color_dark_pink;
+	color: $color_dark_pink;
 	border-radius: 3px;
 	cursor: pointer;
 	padding: 12px;
@@ -39,5 +41,7 @@
  
 .navigation li a:hover,
 .navigation li.active a {
-	background-color: #F47A21;
+	background-color: $color_dark_pink;
+	border: 1px solid $color_dark_pink;
+	color: #fff;
 }

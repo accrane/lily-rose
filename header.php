@@ -83,12 +83,16 @@ $blogname = get_bloginfo('description');
 
 	        	if ( has_post_thumbnail() ) { ?>
 		        	
-		        		<div class="page-banner">
+		        	<?php if( is_single() || is_archive()) { ?>
+		        		
+					<?php } else { ?>
+						<div class="page-banner">
 			        		<div class="logo-page-banner">
 				            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 				            </div>
 							<?php the_post_thumbnail('page-banner'); ?>
 						</div><!-- page banner -->
+					<?php } ?>
 
 				<?php } else { ?> 
 

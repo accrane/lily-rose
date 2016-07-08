@@ -144,6 +144,21 @@ main#main {
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
+
+	ul, ol {
+		margin: 0 0 30px 0;
+		padding: 0;
+
+	}
+	li {
+		margin: 0 0 10px 0;
+		padding: 0;
+		
+	}
+	a {
+		text-decoration: none;
+		@include transition(all .3s ease);
+	}
 }
 
 /* Logo */
@@ -262,7 +277,10 @@ h1.logo {
 	}
 }
 .social-footer {
-
+	clear: both;
+	@media screen and (min-width: $tabwidth) {
+		float: left;
+	}
 }
 .social {
 	width: auto;
@@ -302,17 +320,42 @@ h1.logo {
 	clear: both;
 	padding-top: 30px;
 	background-color: $color-pink;
-
+	overflow: hidden;
 
 	a {
 		color: #000;
 		text-decoration: none;
+		@include transition(.3s ease all);
+		&:hover {
+			color: $color-dark-pink;
+		}
 	}
 
 	.site-info {
-		margin: 0 0 30px 0;
+		margin: 0 0 20px 0;
 		font-size: 14px;
 		overflow: hidden;
 		float: left;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+		}
+	}
+}
+.information {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 20px 0;
+}
+.awards {
+	width: auto;
+
+	@media screen and (min-width: $tabwidth) {
+		float: right;
+	}
+	.award {
+		width: 50px;
+		margin: 5px;
+		float: left;
+		img {width: 100%;}
 	}
 }

@@ -264,6 +264,7 @@ button.menu-toggle {
 		text-decoration: none;
 		padding: 5px;
 		color: #000;
+		@include transition(.3s ease all);
 
 		&:hover {
 			background-color: $color_pink;
