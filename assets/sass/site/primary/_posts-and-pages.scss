@@ -25,6 +25,7 @@
 	width: 100%;
 	border-bottom: 2px solid $color_pink;
 	margin: 5px 0 15px 0;
+	line-height: 1.2;
 	font: {
 		family: $font__heading;
 		size: 30px;
@@ -440,5 +441,16 @@ section.other-collections {
 	img {
 		width: 100%;
 		line-height: 0;
+	}
+}
+.isotope-item {
+	width: 100%;
+	padding: 2%;
+	background-color: $color_pink;
+	margin-bottom: 20px;
+	overflow: hidden;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 45%;
 	}
 }

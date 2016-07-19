@@ -1,5 +1,6 @@
 <div class="subnav">
 <?php 
+wp_reset_postdata();
 
 	$parentID = $post->post_parent;
 	$pageTitle = get_the_title($parentID);
