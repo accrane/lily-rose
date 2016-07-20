@@ -1,5 +1,5 @@
 <?php
-/**
+/** 
  * Template Name: Blog
  */
 
@@ -8,6 +8,9 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="page" class="site-main" role="main">
 
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header><!-- .entry-header -->
 			
 			<?php
 				$wp_query = new WP_Query();

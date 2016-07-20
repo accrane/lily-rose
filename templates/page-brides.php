@@ -2,26 +2,71 @@
 /**
  * Template Name: Brides
  */
+
 get_header(); ?>
 <div class="wrapper">
 	<div id="primary" class="content-area">
 		<main id="page" class="site-main" role="main">
 
+			<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header><!-- .entry-header -->
+			
 			<?php
-			while ( have_posts() ) : the_post();
+				$wp_query = new WP_Query();
+				$wp_query->query(array(
+				'post_type'=>'post',
+				'posts_per_page' => 5,
+				'cat' => 11,
+				'paged' => $paged,
+			));
+				if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
-				get_template_part( 'template-parts/content', 'page' );
+			    if(has_post_thumbnail()) {
+					$postClass = 'thumb';
+				} else {
+					$postClass = 'no-thumb';
+				}
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
+				$images = get_field('gallery');
 			?>
+
+
+				<div class="blogpost ">
+					<div class="read-post"><a href="<?php the_permalink(); ?>" >read more</a></div>
+					
+						<?php if(has_post_thumbnail()) { ?>
+							<div class="image">
+								<?php the_post_thumbnail(); ?>
+							</div>
+						<?php }?>
+						<div class="post-content <?php echo $postClass; ?>">
+							<h2><?php the_title(); ?></h2>
+							<?php the_excerpt(); ?>
+						</div><!-- post content -->
+						<?php if( $images ) : ?>
+								<div class="gal <?php echo $postClass; ?>">
+							      <?php foreach( $images as $image ):?>
+										<div class="gal-images">
+											<a class="gallery" href="<?php echo $image['sizes']['large']; ?>">
+												<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+											</a>
+										</div><!-- gal images -->
+								<?php endforeach; ?>
+							</div>
+						<?php endif; ?>
+						<div class="readmore"><a href="<?php the_permalink(); ?>" >Read More &raquo;</a></div>
+					
+				</div><!-- post -->
+
+
+			<?php endwhile; // End of the loop.?>
+				<?php pagi_posts_nav(); ?>
+		<?php endif; // End of the loop.?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<?php //get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 </div>
-<?php get_footer(); ?>
+<?php
+get_footer();

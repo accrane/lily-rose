@@ -1433,6 +1433,7 @@ main#main .lace-right{width:100%;height:100%;position:absolute;top:0;right:0;z-i
 .widget-area ul,.widget-area ol{margin:0 0 30px 0;padding:0}
 .widget-area li{margin:0 0 10px 0;padding:0}
 .widget-area a{text-decoration:none;-webkit-transition:all .3s ease;transition:all .3s ease}
+.widget-area h2{margin:5px 0 15px 0}
 .logo-page,.logo-page-banner,h1.logo{width:230px;height:184px;z-index:10;position:relative;background-image:url(images/logo.png);background-size:cover;margin:10px auto}
 @media screen and (min-width:600px){.logo-page,.logo-page-banner,h1.logo{width:150px;height:120px}
 }@media screen and (min-width:1200px){.logo-page,.logo-page-banner,h1.logo{width:230px;height:184px}
