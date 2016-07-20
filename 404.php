@@ -21,7 +21,7 @@ get_header(); ?>
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'acstarter' ); ?></p>
 
 					<div class="clear"></div>
-						<?php wp_nav_menu( array( 'theme_location' => 'sitemap', 'menu_id' => 'primary-menu' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'sitemap', 'menu_id' => 'sitemap' ) ); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->

@@ -37,7 +37,7 @@
 }
 section.hero {
 	width: 100%;
-	margin: -150px 0 50px 0;
+	margin: 50px 0 50px 0;
 	float: left;
 	overflow: hidden;
 	z-index: 5;
@@ -53,6 +53,19 @@ section.hero {
 			size: 28px;
 			family: $font__heading;
 		}
+	}
+
+	@media screen and (min-width: $tabwidth) {
+		margin: 50px 0 50px 0;
+	}
+	@media screen and (min-width: $midwidth) {
+		margin: -100px 0 50px 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		margin: -150px 0 50px 0;
+	}
+	@media screen and (min-width: $largewidth) {
+		margin: -150px 0 50px 0;
 	}
 }
 

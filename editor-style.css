@@ -1,3 +1,21 @@
 .custom-color {
   color: #444;
 }
+.pink-button a {
+	width: auto;
+    padding: 10px 20px;
+    background-color: #FEF3F7;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    z-index: 11;
+    text-decoration: none;
+    color: #F38AB2;
+}
+.pink-button {
+	width: auto;
+    background-color: #FEF3F7;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    z-index: 11;
+}
+	

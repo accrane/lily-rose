@@ -81,10 +81,32 @@ $blogname = get_bloginfo('description');
 	            </div><!-- wrapper -->
 	        <?php } else { 
 
-	        	if ( has_post_thumbnail() ) { ?>
+	        	if ( has_post_thumbnail() || is_tax() ) { ?>
 		        	
-		        	<?php if( is_single() || is_archive()) { ?>
-		        		
+		        	<?php if( is_single() ) { ?>
+		        		<div class="page-banner">
+			        		<div class="logo-page-banner">
+				            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+				            </div>
+							<?php the_post_thumbnail('page-banner'); ?>
+						</div><!-- page banner -->
+
+		        	<?php } elseif( is_tax() ) { 
+		        		$termID = get_queried_object()->term_id;
+		        		// echo '<pre>';
+		        		// print_r($termID);
+		        		// echo '</pre>';
+		        		$bannerImage = get_field( 'header_image', 'collection_'.$termID );
+		        		$size = 'page-banner';
+
+
+		        		?>
+		        		<div class="page-banner">
+			        		<div class="logo-page-banner">
+				            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+				            </div>
+							<?php if( $bannerImage ) : echo wp_get_attachment_image( $bannerImage, $size ); endif; ?>
+						</div><!-- page banner -->
 					<?php } else { ?>
 						<div class="page-banner">
 			        		<div class="logo-page-banner">

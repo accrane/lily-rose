@@ -257,6 +257,7 @@ h1.logo {
 	}
 	@media screen and (min-width: $deskwidth) {
 		top: 20px;
+		left: 10%;
 	}
 	@media screen and (min-width: $largewidth) {
 		top: 20px;
@@ -360,5 +361,16 @@ h1.logo {
 		margin: 5px;
 		float: left;
 		img {width: 100%;}
+	}
+}
+.pink-button {
+	a {
+		width: auto;
+		display: inline-block;
+	    padding: 10px 20px;
+	    background-color: #FEF3F7;
+	    -webkit-transition: all ease 0.3s;
+	    transition: all ease 0.3s;
+	    z-index: 11;
 	}
 }

@@ -13,26 +13,35 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="wrapper">
+	<div id="primary" class="content-area-full">
 		<main id="page" class="site-main" role="main">
 
+			<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header><!-- .entry-header -->
+
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) : the_post(); ?>
 
-				get_template_part( 'template-parts/content', 'page' );
+			<div class="entry-content">
+				<?php 
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				the_content();
 
-			endwhile; // End of the loop.
+				if( is_page('sitemap') ) {
+					wp_nav_menu( array( 'theme_location' => 'sitemap', 'menu_id' => 'sitemap' ) );
+				}
+
+				?>
+			</div>
+
+			<?php endwhile; // End of the loop.
 			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

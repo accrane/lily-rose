@@ -1,5 +1,12 @@
 <?php 
 if ( ! function_exists( 'acstarter_setup' ) ) :
+
+add_editor_style( 'editor-style.css' );
+  // Add styles to WYSIWYG in your theme's editor-style.css file
+function my_theme_add_editor_styles() {
+    
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *

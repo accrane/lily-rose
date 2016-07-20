@@ -77,6 +77,8 @@ if ( ! current_user_can( 'manage_options' ) ) {
   But always use this to get the custom formats
 
 */
+
+
  
 function my_mce_before_init_insert_formats( $init_array ) {  
  
@@ -85,12 +87,30 @@ function my_mce_before_init_insert_formats( $init_array ) {
   $style_formats = array(  
     // Each array child is a format with it's own settings
     array(  
-      'title' => 'Custom Color',  
-      'block' => 'span',  
-      'classes' => 'custom-color',
+      'title' => 'Pink Button',  
+      'inline' => 'span',  
+      'classes' => 'pink-button',
       'wrapper' => true,
-      
-    )
+      // 'styles' => array(
+      //       'color'         => '#D61E36', // or hex value #ff0000
+      //       //'fontWeight'    => 'bold',
+      //       //'textTransform' => 'uppercase'
+      //   )
+      ),
+      array(
+        'title' => 'Header 2',
+        'format' => 'h2',
+        //'icon' => 'bold'
+      ),
+      array(
+          'title' => 'Header 3',
+          'format' => 'h3'
+      ),
+      array(
+          'title' => 'Paragraph',
+          'format' => 'p'
+      )
+    
   );  
   // Insert the array, JSON ENCODED, into 'style_formats'
   $init_array['style_formats'] = json_encode( $style_formats );  
@@ -100,11 +120,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
-// Add styles to WYSIWYG in your theme's editor-style.css file
-function my_theme_add_editor_styles() {
-    add_editor_style( 'editor-style.css' );
-}
-add_action( 'init', 'my_theme_add_editor_styles' );
+
 
 /*-------------------------------------
   Custom Excerpt
