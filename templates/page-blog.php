@@ -28,6 +28,8 @@ get_header(); ?>
 				}
 
 				$images = get_field('gallery');
+				$theTitle = get_the_title();
+				$dashed = sanitize_title_with_dashes($theTitle);
 			?>
 
 
@@ -47,7 +49,7 @@ get_header(); ?>
 								<div class="gal <?php echo $postClass; ?>">
 							      <?php foreach( $images as $image ):?>
 										<div class="gal-images">
-											<a class="gallery" href="<?php echo $image['sizes']['large']; ?>">
+											<a class="gallery" href="<?php echo $image['sizes']['large']; ?>"  data-rel="<?php echo $dashed; ?>">
 												<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
 											</a>
 										</div><!-- gal images -->

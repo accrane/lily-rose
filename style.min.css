@@ -1233,7 +1233,7 @@ button:focus{outline:0}
 body,button,input,select,textarea{color:#404040;font-family:"Muli",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:36px}
-h2{font-size:30}
+h2{font-size:30px}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
@@ -1417,7 +1417,7 @@ main#main .lace-left{width:100%;height:100%;position:absolute;bottom:0;left:0;z-
 main#main .lace-right{width:100%;height:100%;position:absolute;top:0;right:0;z-index:1;background-image:url(images/lace-left.png);background-repeat:no-repeat;background-position:top 0 right 0}
 @media screen and (min-width:900px){#main-page{padding-top:50px}
 }.content-area{width:100%;margin:0 auto;overflow:hidden}
-@media screen and (min-width:600px){.content-area{width:76%;float:right;margin:0}
+@media screen and (min-width:600px){.content-area{width:72%;float:right;margin:0}
 }@media screen and (min-width:1200px){}
 .content-area-full{width:100%;margin:0 auto;overflow:hidden}
 @media screen and (min-width:600px){.content-area-full{margin:0}
@@ -1429,7 +1429,7 @@ main#main .lace-right{width:100%;height:100%;position:absolute;top:0;right:0;z-i
 @media screen and (min-width:600px){.contact-media{width:60%;float:right;margin:0}
 }@media screen and (min-width:1200px){}
 .widget-area{width:100%;margin:0 auto;overflow:hidden}
-@media screen and (min-width:600px){.widget-area{width:16%;float:left;margin:0}
+@media screen and (min-width:600px){.widget-area{width:20%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
 .widget-area ul,.widget-area ol{margin:0 0 30px 0;padding:0}
 .widget-area li{margin:0 0 10px 0;padding:0}
@@ -1482,7 +1482,7 @@ main#main .lace-right{width:100%;height:100%;position:absolute;top:0;right:0;z-i
 .byline,.updated:not(.published){display:none}
 .single .byline,.group-blog .byline{display:inline}
 .page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
-.entry-title{width:100%;border-bottom:2px solid #fef3f7;margin:5px 0 15px 0;line-height:1.2;font-family:"Parisienne",cursive;font-size:30px}
+.entry-title{width:100%;border-bottom:2px solid #fef3f7;margin:5px 0 15px 0;line-height:1.2;font-family:"Parisienne",cursive;font-size:36px}
 .page-links{clear:both;margin:0 0 1.5em}
 section.hero{width:100%;margin:50px 0 50px 0;float:left;overflow:hidden;z-index:5;position:relative}
 section.hero img{width:100%}
@@ -1526,9 +1526,10 @@ section.instagram #sb_instagram img,section.instagram #sb_instagram .sbi_photo{b
 .collection .photo img{width:100%;line-height:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all ease .3s;transition:all ease .3s}
 .collection .logo{width:50%;margin:10px auto}
 .collection .logo img{width:100%}
-.collection h2{width:100%;text-align:center;font-family:"Parisienne",cursive;font-size:24px}
+.collection h2{width:100%;text-align:center;font-family:"Parisienne",cursive;font-size:30px}
 .collection a{text-decoration:none;color:#000;display:block}
 .collection:hover .photo img{-webkit-transform:scale(1.05);-ms-transform:scale(1.05);transform:scale(1.05)}
+section.collections{width:100%;clear:both}
 @media screen and (min-width:600px){section.collections .collection{width:24.2%;float:left}
 }section.other-collections{width:100%;clear:both;margin:50px 0 40px 0}
 @media screen and (min-width:600px){section.other-collections .collection{width:19.2%;float:left}
@@ -1561,6 +1562,9 @@ section.instagram #sb_instagram img,section.instagram #sb_instagram .sbi_photo{b
 .gal-images{width:50px;margin:3px;float:left;position:relative;z-index:12}
 .gal-images a{display:block;width:100%;padding:0;margin:0;line-height:0;position:relative;z-index:12}
 .gal-images img{width:100%;line-height:0}
+.single-gal-images{width:150px;margin:3px;float:left;position:relative;z-index:12}
+.single-gal-images a{display:block;width:100%;padding:0;margin:0;line-height:0;position:relative;z-index:12}
+.single-gal-images img{width:100%;line-height:0}
 .isotope-item{width:100%;padding:2%;background-color:#fef3f7;margin-bottom:20px;overflow:hidden}
 @media screen and (min-width:600px){.isotope-item{width:45%}
 }.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}

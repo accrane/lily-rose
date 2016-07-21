@@ -28,7 +28,7 @@
 	line-height: 1.2;
 	font: {
 		family: $font__heading;
-		size: 30px;
+		size: 36px;
 	}
 }
 .page-links {
@@ -265,7 +265,7 @@ section.instagram {
 		text-align: center;
 		font: {
 			family: $font__heading;
-			size: 24px;
+			size: 30px;
 		}
 	}
 	a {
@@ -283,7 +283,8 @@ section.instagram {
 	
 }
 section.collections {
-
+	width: 100%;
+	clear: both;
 	.collection {
 		@media screen and (min-width: $tabwidth) {
 			width: 24.2%;
@@ -438,6 +439,26 @@ section.other-collections {
 }
 .gal-images {
 	width: 50px;
+	margin: 3px;
+	float: left;
+	position: relative;
+	z-index: 12;
+	a {
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		line-height: 0;
+		position: relative;
+		z-index: 12;
+	}
+	img {
+		width: 100%;
+		line-height: 0;
+	}
+}
+.single-gal-images {
+	width: 150px;
 	margin: 3px;
 	float: left;
 	position: relative;
