@@ -58,7 +58,13 @@ $blogname = get_bloginfo('description');
 
 	        	if ( has_post_thumbnail() || is_tax() ) { ?>
 		        	
-		        	<?php if( is_single() ) { ?>
+		        	<?php if( is_single() ) { 
+						// specific post ID you want to pull
+						$post = get_post(12); 
+						setup_postdata( $post );
+						 
+							
+						?>
 		        		<div class="page-banner">
 			        		<div class="logo-page-banner">
 				            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
@@ -66,7 +72,10 @@ $blogname = get_bloginfo('description');
 							<?php the_post_thumbnail('page-banner'); ?>
 						</div><!-- page banner -->
 
-		        	<?php } elseif( is_tax() ) { 
+		        	<?php 
+						wp_reset_postdata();
+
+		        } elseif( is_tax() ) { 
 		        		$termID = get_queried_object()->term_id;
 		        		// echo '<pre>';
 		        		// print_r($termID);
