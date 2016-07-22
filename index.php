@@ -105,7 +105,7 @@ $size = 'full';
 
 		<section class="instagram">
 			<h2>
-				<a href="https://www.instagram.com/lilyrosebridal/">@lilyrosebridal</a>
+				<a href="https://www.instagram.com/lilyrosebridal/" target="_blank">@lilyrosebridal</a>
 			</h2>
 			<div class="instagram-box">
 				<a href="<?php echo $link_instagram; ?>">
