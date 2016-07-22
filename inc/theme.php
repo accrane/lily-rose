@@ -31,13 +31,7 @@ function loginpage_custom_link() {
 }
 add_filter('login_headerurl','loginpage_custom_link');
 
-/*-------------------------------------
-	Favicon.
----------------------------------------*/
-function mytheme_favicon() { 
- echo '<link rel="shortcut icon" href="' . get_bloginfo('stylesheet_directory') . '/images/favicon.ico" >'; 
-} 
-add_action('wp_head', 'mytheme_favicon');
+
 
 /*-------------------------------------
   Hide Admin Bar
