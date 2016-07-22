@@ -50,7 +50,9 @@ $size = 'full';
 
 <div class="wrapper">
 	<section class="from-the-blog">
-		<h2>from the blog</h2>
+		<h2>
+		<a href="<?php bloginfo('url'); ?>/blog">from the blog</a>
+		</h2>
 		<?php
 
 		if( $post_object ): 
@@ -102,7 +104,9 @@ $size = 'full';
 		</section>		
 
 		<section class="instagram">
-			<h2>@lilyrosebridal</h2>
+			<h2>
+				<a href="https://www.instagram.com/lilyrosebridal/">@lilyrosebridal</a>
+			</h2>
 			<div class="instagram-box">
 				<a href="<?php echo $link_instagram; ?>">
 					<?php echo do_shortcode('[instagram-feed]'); ?>
@@ -111,7 +115,9 @@ $size = 'full';
 		</section>
 
 		<section class="testimonial">
-			<h2>from our clients</h2>
+			<h2>
+				<a href="<?php bloginfo('url'); ?>/read-our-reviews">from our clients</a>
+			</h2>
 			<?php $wp_query = new WP_Query();
 				$wp_query->query(array(
 				'post_type'=>'testimonial',

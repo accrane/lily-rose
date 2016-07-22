@@ -47,8 +47,8 @@ $slug = $queried_object->slug;
 // print_r($list);
 // echo '</pre>';
  ?>
-	<div id="secondary" class="widget-area">
-		<div class="subnav">
+	<div id="secondary" class="widget-area ">
+		<div class="subnav sub-nav-collections">
 			<h1>collections</h1>
 			<ul>
 				<?php 
@@ -124,6 +124,36 @@ $slug = $queried_object->slug;
 
 <?php endwhile; endif; ?>
 	</section>
+
+
+	<div class="subnav sub-nav-collections-mobile">
+		<h1>collections</h1>
+		<ul>
+			<?php 
+			$collections = get_terms( 'collection' );
+
+			foreach( $collections as $col ) : 
+
+				$tID = $col->term_id;
+				$link = get_term_link($tID);
+
+				echo '<li><a href="'.$link.'">';
+					echo $col->name;
+				echo '</a></li>';
+
+			endforeach;
+
+
+			// foreach( $list as $item => $item_value ) {
+
+			// 	echo '<li><a href="#'.$item_value.'">';
+			// 		echo $item;
+			// 	echo '</a></li>';
+
+			// 	} ?>
+		</ul>
+	</div><!-- subnav -->
+	
 
 
 	

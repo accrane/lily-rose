@@ -72,6 +72,7 @@ section.hero {
 section.from-the-blog, section.instagram, section.testimonial {
 	width: 100%;
 	position: relative;
+	z-index:20;
 
 	@media screen and (min-width: $tabwidth) {
 		width: 28%;
@@ -85,6 +86,10 @@ section.from-the-blog, section.instagram, section.testimonial {
 		font: {
 			family: $font__heading;
 			size: 34px;
+		}
+		& a {
+			text-decoration: none;
+			color: #404040;
 		}
 	}
 }
@@ -349,7 +354,11 @@ section.other-collections {
 	float:  left;
 	margin: 0 0 30px 0;
 	position: relative;
-	padding: 5% 5% 40px 5%;
+	padding: 5% 5% 80px 5%;
+
+	@media screen and (min-width: $tabwidth) {
+		padding: 5% 5% 40px 5%;
+	}
 
 	& a {
 		display: block;
@@ -387,7 +396,10 @@ section.other-collections {
 		position: relative;
 		z-index: 2;
 		&.thumb {
-			width: 60%;
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				width: 60%;
+			}
 		}
 		&.no-thumb {
 			width: 100%;
@@ -398,7 +410,10 @@ section.other-collections {
 		float: right;
 		position: relative;
 		&.thumb {
-			width: 60%;
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				width: 60%;
+			}
 		}
 		&.no-thumb {
 			width: 100%;
@@ -415,12 +430,15 @@ section.other-collections {
 		text-indent: -9000px;
 	}
 	.image {
-		width: 33%;
+		width: 100%;
 		float:  left;
 		position: relative;
 		z-index: 2;
 		img {
 			width: 100%;
+		}
+		@media screen and (min-width: $tabwidth) {
+			width: 33%;
 		}
 	}
 	.readmore {

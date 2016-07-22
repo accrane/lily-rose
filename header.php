@@ -40,45 +40,15 @@ $blogname = get_bloginfo('description');
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="nav-wrap">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="wrapper">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?>	</button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-
-					<div class="social social-header">
-						<i class="fa fa-2x fa-facebook" aria-hidden="true">
-							<a href="<?php echo $facebook; ?>">facebook</a>
-						</i>
-						<i class="fa fa-2x fa-instagram" aria-hidden="true">
-							<a href="<?php echo $instagram; ?>">instagram</a>
-						</i>
-						<i class="fa fa-2x fa-pinterest-p" aria-hidden="true">
-							<a href="<?php echo $pintrest; ?>">pinterest</a>
-						</i>
-					</div><!-- social -->
 
 
-				</div><!-- wrapper -->
-
-
-			</nav><!-- #site-navigation -->
-			
-			
-
-		</div><!-- nav-wrap -->
-
-
-		
-
-
-			
-			<?php if(is_home()) { ?>
+		<?php if(is_home()) { ?>
 				<div class="wrapper">
 		            <h1 class="logo">
 		            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 		            </h1>
 	            </div><!-- wrapper -->
+
 	        <?php } else { 
 
 	        	if ( has_post_thumbnail() || is_tax() ) { ?>
@@ -118,18 +88,53 @@ $blogname = get_bloginfo('description');
 
 				<?php } else { ?> 
 
-		        	<div class="wrapper">
+		        	<!--<div class="wrapper">
 			            <div class="logo-page">
 			            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 			            </div>
-		            </div><!-- wrapper -->
+		            </div> wrapper -->
+
+		            <div class="page-banner">
+			        		<div class="logo-page-banner">
+				            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+				            </div>
+							<img src="<?php bloginfo('template_url'); ?>/images/banner-default.jpg">
+						</div><!-- page banner -->
 
 		            <div class="clear"></div>
 
 	        <?php } } ?>
 
+
+
+		<div class="nav-wrap">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="wrapper">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?>	</button>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
+					<div class="social social-header">
+						<i class="fa fa-2x fa-facebook" aria-hidden="true">
+							<a href="<?php echo $facebook; ?>">facebook</a>
+						</i>
+						<i class="fa fa-2x fa-instagram" aria-hidden="true">
+							<a href="<?php echo $instagram; ?>">instagram</a>
+						</i>
+						<i class="fa fa-2x fa-pinterest-p" aria-hidden="true">
+							<a href="<?php echo $pintrest; ?>">pinterest</a>
+						</i>
+					</div><!-- social -->
+
+
+				</div><!-- wrapper -->
+
+
+			</nav><!-- #site-navigation -->
 			
-	
+			
+
+		</div><!-- nav-wrap -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content ">
