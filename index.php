@@ -19,7 +19,8 @@ $post = get_post(47);
 setup_postdata( $post );
  
 	$tagline = get_field('tagline');
-	$hero = get_field('hero');
+	//$hero = get_field('hero');
+	$images = get_field('hero_slides');
 	// picked blog
 	$post_object = get_field('from_the_blog');
 
@@ -41,7 +42,32 @@ $size = 'full';
 <div class="wrapper">
 	<section class="hero">
 		<div class="tagline"><?php echo $tagline; ?></div>
-		<?php if( $hero ) { echo wp_get_attachment_image( $hero, $size ); } ?>
+		<?php //if( $hero ) { echo wp_get_attachment_image( $hero, $size ); } ?>
+
+		<div class="flexslider">
+	        <ul class="slides">
+	        <?php 
+
+				if( $images ): 
+
+					foreach( $images as $image ):
+
+						?>
+	            
+	            <li> 
+	              
+	                <a href="<?php echo $image['url']; ?>">
+	                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+	                </a>
+	                
+	            </li>
+	            
+	           <?php endforeach; ?>
+	           <?php endif; ?>
+	      	 </ul><!-- slides -->
+		</div><!-- .flexslider -->
+		 
+
 	</section>
 </div><!-- wrapper -->
 
