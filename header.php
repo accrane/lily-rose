@@ -75,7 +75,7 @@ $blogname = get_bloginfo('description');
 		        	<?php 
 						wp_reset_postdata();
 
-		        } elseif( is_tax() || is_archive() ) { 
+		        } elseif( is_tax() ) { 
 		        		$termID = get_queried_object()->term_id;
 		        		// echo '<pre>';
 		        		// print_r($termID);
@@ -99,6 +99,15 @@ $blogname = get_bloginfo('description');
 							<?php the_post_thumbnail('page-banner'); ?>
 						</div><!-- page banner -->
 					<?php } ?>
+
+				<?php} elseif { is_archive() ?>
+
+						<div class="page-banner">
+			        		<div class="logo-page-banner">
+				            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+				            </div>
+							<img src="<?php bloginfo('template_url'); ?>/images/banner-default.jpg">
+						</div><!-- page banner -->
 
 				<?php } else { ?> 
 
