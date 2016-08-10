@@ -100,7 +100,7 @@ $blogname = get_bloginfo('description');
 						</div><!-- page banner -->
 					<?php } ?>
 
-				<?php} elseif { is_archive() ?>
+				<?php} elseif is_archive() { ?>
 
 						<div class="page-banner">
 			        		<div class="logo-page-banner">
