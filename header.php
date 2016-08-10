@@ -75,7 +75,7 @@ $blogname = get_bloginfo('description');
 		        	<?php 
 						wp_reset_postdata();
 
-		        } elseif( is_tax() ) { 
+		        } elseif( is_tax() || is_archive() ) { 
 		        		$termID = get_queried_object()->term_id;
 		        		// echo '<pre>';
 		        		// print_r($termID);
@@ -129,13 +129,13 @@ $blogname = get_bloginfo('description');
 
 					<div class="social social-header">
 						<i class="fa fa-2x fa-facebook" aria-hidden="true">
-							<a href="<?php echo $facebook; ?>">facebook</a>
+							<a target="_blank"> href="<?php echo $facebook; ?>">facebook</a>
 						</i>
 						<i class="fa fa-2x fa-instagram" aria-hidden="true">
-							<a href="<?php echo $instagram; ?>">instagram</a>
+							<a target="_blank" href="<?php echo $instagram; ?>">instagram</a>
 						</i>
 						<i class="fa fa-2x fa-pinterest-p" aria-hidden="true">
-							<a href="<?php echo $pintrest; ?>">pinterest</a>
+							<a target="_blank" href="<?php echo $pintrest; ?>">pinterest</a>
 						</i>
 					</div><!-- social -->
 
