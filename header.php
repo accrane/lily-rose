@@ -54,6 +54,15 @@ $blogname = get_bloginfo('description');
 		            </h1>
 	            </div><!-- wrapper -->
 
+            <?php } elseif( is_archive() ) { ?>
+
+					<div class="page-banner">
+		        		<div class="logo-page-banner">
+			            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+			            </div>
+						<img src="<?php bloginfo('template_url'); ?>/images/banner-default.jpg">
+					</div><!-- page banner -->
+
 	        <?php } else { 
 
 	        	if ( has_post_thumbnail() || is_tax() ) { ?>
@@ -100,14 +109,7 @@ $blogname = get_bloginfo('description');
 						</div><!-- page banner -->
 					<?php } ?>
 
-				<?php} elseif( is_archive() ) { ?>
-
-						<div class="page-banner">
-			        		<div class="logo-page-banner">
-				            	<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-				            </div>
-							<img src="<?php bloginfo('template_url'); ?>/images/banner-default.jpg">
-						</div><!-- page banner -->
+				
 
 				<?php } else { ?> 
 
