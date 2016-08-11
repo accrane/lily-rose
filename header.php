@@ -140,7 +140,7 @@ $blogname = get_bloginfo('description');
 
 					<div class="social social-header">
 						<i class="fa fa-2x fa-facebook" aria-hidden="true">
-							<a target="_blank"> href="<?php echo $facebook; ?>">facebook</a>
+							<a target="_blank" href="<?php echo $facebook; ?>">facebook</a>
 						</i>
 						<i class="fa fa-2x fa-instagram" aria-hidden="true">
 							<a target="_blank" href="<?php echo $instagram; ?>">instagram</a>
