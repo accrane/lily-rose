@@ -85,6 +85,7 @@ $blogname = get_bloginfo('name');
   });
 </script>
 
+<?php the_field('google_analytics', 'option'); ?>
 
 </body>
 </html>
