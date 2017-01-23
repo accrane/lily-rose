@@ -37,7 +37,7 @@ $slug = $queried_object->slug;
 
 
 			<?php if( $contract != '' ) { ?>
-				   	<a target="_blank"> class="pink-button" href="<?php echo $contract; ?>">Contract Form</a>
+				   	<a target="_blank" class="pink-button" href="<?php echo $contract; ?>">Contract Form</a>
 				   <?php } ?>
 
 			<?php //endwhile; ?>
