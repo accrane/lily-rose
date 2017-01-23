@@ -52,7 +52,7 @@ get_header(); ?>
 				   </div><!-- display none -->
 
 				   <?php if( $chart != '' ) { ?>
-				   	<a target="_blank"> class="pink-button" href="<?php echo $chart; ?>">Sizing Chart</a>
+				   	<a target="_blank" class="pink-button" href="<?php echo $chart; ?>">Sizing Chart</a>
 				   <?php } ?>
 
 				   <a class="gallery" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
