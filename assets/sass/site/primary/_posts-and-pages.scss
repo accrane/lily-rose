@@ -295,7 +295,7 @@ section.collections {
 	.collection {
 		@media screen and (min-width: $tabwidth) {
 			width: 24.2%;
-			
+			float: left;
 		}
 	}
 }
