@@ -290,10 +290,12 @@ section.instagram {
 section.collections {
 	width: 100%;
 	clear: both;
+	float: left;
+	margin-top: 30px;
 	.collection {
 		@media screen and (min-width: $tabwidth) {
 			width: 24.2%;
-			float: left;
+			
 		}
 	}
 }
