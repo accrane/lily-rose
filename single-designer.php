@@ -17,6 +17,7 @@ get_header(); ?>
 			$postID = get_the_ID();
 			$title = get_the_title();
 			$desc = get_field('description');
+			$chart = get_field('sizing_chart');
 			$sani = sanitize_title_with_dashes($title);
 			// image
 			$image = get_field('image');
@@ -49,6 +50,11 @@ get_header(); ?>
 			                </a>
 					     <?php endforeach; ?>
 				   </div><!-- display none -->
+
+				   <?php if( $chart != '' ) { ?>
+				   	<a target="_blank"> class="pink-button" href="<?php echo $chart; ?>">Sizing Chart</a>
+				   <?php } ?>
+
 				   <a class="gallery" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
 	                     More Photos
 	                </a>

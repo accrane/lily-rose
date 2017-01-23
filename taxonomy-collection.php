@@ -21,6 +21,7 @@ $slug = $queried_object->slug;
 			<?php //while(have_posts()) : the_post(); 
 
 			$desc = get_field('description', 'collection_'.$term_id);
+			$contract = get_field('contract', 'collection_'.$term_id);
 
 			?>
 
@@ -33,6 +34,11 @@ $slug = $queried_object->slug;
 			<div class="entry-content">
 				<?php echo $desc; ?>
 			</div>
+
+
+			<?php if( $contract != '' ) { ?>
+				   	<a target="_blank"> class="pink-button" href="<?php echo $contract; ?>">Contract Form</a>
+				   <?php } ?>
 
 			<?php //endwhile; ?>
 			
