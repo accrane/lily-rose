@@ -7,7 +7,12 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+
+// Bridesmaids IDr
+$contract = get_field('contract', 'collection_5');
+
+?>
 <div class="wrapper">
 	<div id="primary" class="content-area">
 		<main id="page" class="site-main" role="main">
@@ -18,6 +23,7 @@ get_header(); ?>
 			$title = get_the_title();
 			$desc = get_field('description');
 			$chart = get_field('sizing_chart');
+			$oldchart = get_field('old_sizing_chart');
 			$sani = sanitize_title_with_dashes($title);
 			// image
 			$image = get_field('image');
@@ -52,9 +58,17 @@ get_header(); ?>
 				   </div><!-- display none -->
 
 				   <?php if( $chart != '' ) { ?>
-				   	<a target="_blank" class="pink-button" href="<?php echo $chart; ?>">Sizing Chart</a>
+				   		<?php if( $postID === 177 || $postID === 179 ) { ?>
+				   			<a target="_blank" class="order-form" href="<?php echo $chart; ?>">Sizing Chart Spring 2017 &amp; After</a>
+				   		<?php } else { ?>
+				   			<a target="_blank" class="order-form" href="<?php echo $chart; ?>">Sizing Chart</a>
+				   		<?php } ?>
 				   <?php } ?>
 
+				   <?php if( $oldchart != '' ) { ?>
+				   		<a target="_blank" class="order-form" href="<?php echo $oldchart; ?>">Sizing Chart Fall 2016 &amp; Before</a>
+				   <?php } ?>
+				   <div class="clear"></div>
 				   <a class="gallery" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
 	                     More Photos
 	                </a>
@@ -112,6 +126,9 @@ get_header(); ?>
 			<?php endwhile; endif; ?>
 			</ul>
 		</div><!-- subnav-->
+		<?php if( $contract != '' ) { ?>
+		   	<a target="_blank" class="order-form" href="<?php echo $contract; ?>">Bridesmaids Order Form</a>
+		<?php } ?>
 	</div><!-- widget-area -->
 
 

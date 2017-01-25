@@ -36,9 +36,7 @@ $slug = $queried_object->slug;
 			</div>
 
 
-			<?php if( $contract != '' ) { ?>
-				   	<a target="_blank" class="pink-button" href="<?php echo $contract; ?>">Contract Form</a>
-				   <?php } ?>
+			
 
 			<?php //endwhile; ?>
 			
@@ -81,6 +79,9 @@ $slug = $queried_object->slug;
 				// 	} ?>
 			</ul>
 		</div><!-- subnav -->
+		<?php if( $contract != '' ) { ?>
+		   	<a target="_blank" class="order-form" href="<?php echo $contract; ?>">Bridesmaids Order Form</a>
+		<?php } ?>
 	</div><!-- secondary -->
 
 	<section class="collections">
