@@ -132,7 +132,7 @@ $contract = get_field('contract', 'collection_5');
 	</div><!-- widget-area -->
 
 
-	<section class="other-collections">
+	<section class="collections">
 		<h2>other collections</h2>
 		<?php
 		$collections = get_terms( 'collection' );
