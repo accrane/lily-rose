@@ -8,6 +8,37 @@ div {
 	-webkit-hyphens: auto;
 	hyphens: auto;
 }
+.scroll-wrap {
+	height: 50px; 
+	margin: 20px 0 0 0;
+	background-color: $color-dark-pink;
+}
+.scroll-banner {
+	height: 50px; 
+	line-height: 50px;
+	overflow: hidden;
+	position: relative;
+	
+	color: #fff;
+	
+	font-size: 22px;
+}
+.scroll-banner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: floatText 25s infinite linear;
+  padding-left: 100%; /*Initial offset*/
+}
+
+.scroll-banner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes floatText {
+  to {
+    transform: translateX(-100%);
+  }
+}
 .clear {clear: both;}
 .wrapper {
 	width: 100%;

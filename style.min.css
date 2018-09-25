@@ -548,7 +548,7 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */@font-face{font-family:'FontAwesome';src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0");src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0#iefix") format("embedded-opentype"),url("./fonts/font-awesome/fontawesome-webfont.woff2?v=4.5.0") format("woff2"),url("./fonts/font-awesome/fontawesome-webfont.woff?v=4.5.0") format("woff"),url("./fonts/font-awesome/fontawesome-webfont.ttf?v=4.5.0") format("truetype"),url("./fonts/font-awesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");font-weight:normal;font-style:normal}
-.fa{display:inline-block;font:normal normal normal 14px / 1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
 .fa-3x{font-size:3em}
@@ -1290,10 +1290,10 @@ a:hover,a:active{outline:0}
 @media screen and (min-width:900px){.main-navigation ul ul a{width:200px}
 }.main-navigation ul li:hover>ul,.main-navigation ul li.focus>ul{left:auto}
 .main-navigation li{float:left;position:relative;line-height:2;margin:10px auto;font-size:18px;width:100%}
-@media screen and (min-width:900px){.main-navigation li{width:auto;font-size:14px;margin:0}
+@media screen and (min-width:900px){.main-navigation li{width:auto;font-size:14px;margin:0 20px 0 0}
 }@media screen and (min-width:1200px){.main-navigation li{font-size:15px;margin:0 11px 0 0}
-}@media screen and (min-width:1300px){.main-navigation li{font-size:17px;margin:0 6px 0 0}
-}.main-navigation a{display:block;text-decoration:none;color:#000;position:relative;padding:0 10px}
+}@media screen and (min-width:1300px){.main-navigation li{font-size:17px;margin:0 22px 0 0}
+}.main-navigation a{display:block;text-decoration:none;color:#000;position:relative;padding:0}
 .main-navigation a:before{content:"";position:absolute;width:100%;height:1px;bottom:0;left:0;background-color:#f38ab2;visibility:hidden;-webkit-transition:.3s ease all;transition:.3s ease all;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0)}
 .main-navigation a:hover:before{visibility:visible;-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}
 .main-navigation .current_page_item>a:before,.main-navigation .current-menu-item>a:before,.main-navigation .current_page_ancestor>a:before,.main-navigation .current-menu-ancestor>a:before{content:"";position:absolute;width:100%;height:1px;bottom:0;left:0;background-color:#f38ab2;visibility:visible;-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}
@@ -1407,7 +1407,13 @@ html[xmlns] .flexslider .slides{display:block}
 }.widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 div{-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
-.clear{clear:both}
+.scroll-wrap{height:50px;margin:20px 0 0 0;background-color:#f38ab2}
+.scroll-banner{height:50px;line-height:50px;overflow:hidden;position:relative;color:#fff;font-size:22px}
+.scroll-banner{display:inline-block;white-space:nowrap;-webkit-animation:floatText 25s infinite linear;animation:floatText 25s infinite linear;padding-left:100%}
+.scroll-banner:hover{-webkit-animation-play-state:paused;animation-play-state:paused}
+@-webkit-keyframes floatText{to{-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+}@keyframes floatText{to{-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+}.clear{clear:both}
 .wrapper{width:100%;margin:0 auto;padding:20px;clear:both}
 @media screen and (min-width:600px){.wrapper{width:100%;padding:0 5%}
 }@media screen and (min-width:1200px){.wrapper{width:90%;padding:0 5%}

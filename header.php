@@ -41,6 +41,21 @@ $blogname = get_bloginfo('description');
 
 <body <?php body_class(); ?>>
 <div id="main-page" class="site">
+<?php if(is_front_page()) : 
+$alert=get_field('scrolling_banner', 'option');
+$Showalert=get_field('show_scrolling_banner', 'option');
+if($Showalert){$Showalert=$Showalert[0];}
+	if($Showalert=='Yes' && $alert!=''){
+?>
+	<div class="scroll-wrap">
+		<div class="scroll-banner">
+			<?php echo $alert; ?>
+		</div>
+	</div>
+	
+<?php 
+	}
+endif; ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
