@@ -82,6 +82,7 @@ $slug = $queried_object->slug;
 		<?php if( $contract != '' ) { ?>
 		   	<a target="_blank" class="order-form" href="<?php echo $contract; ?>">Bridesmaids Order Form</a>
 		<?php } ?>
+		<a target="_blank" class="order-form" href="<?php bloginfo('url'); ?>/size-charts">Size Charts</a>
 	</div><!-- secondary -->
 
 	<section class="other-collections">
