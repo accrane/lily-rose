@@ -31,6 +31,7 @@ $contract = get_field('contract', 'collection_5');
 			$size = 'full';
 			// gallery
 			$gallery = get_field('gallery');
+			$designerWebLink = get_field('designer_website');
 
 		 ?>
 		<div id="<?php echo $sani; ?>" class="designer" >
@@ -40,7 +41,11 @@ $contract = get_field('contract', 'collection_5');
 				</h2>
 			</header><!-- .entry-header -->
 
-			<div class="photo"><?php echo wp_get_attachment_image( $image, $size ); ?></div>
+			<div class="photo">
+				<?php if($designerWebLink){?><a target="_blank" href="<?php echo $designerWebLink; ?>"><?php } ?>
+					<?php echo wp_get_attachment_image( $image, $size ); ?>
+				<?php if($designerWebLink){?></a><?php } ?>
+			</div>
 
 			<div class="designer-right">
 			<div class="logo"><?php echo wp_get_attachment_image( $logo, $size ); ?></div>
