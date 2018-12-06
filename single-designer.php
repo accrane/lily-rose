@@ -56,7 +56,11 @@ $contract = get_field('contract', 'collection_5');
 				if( $gallery ): ?>
 					<div style="display:none;">
 					    <?php foreach( $gallery as $image ): ?>
+					    	<?php if($designerWebLink) { ?>
+					    		<a target="_blank" href="<?php echo $designerWebLink; ?>">
+					    	<?php } else { ?>
 					    	<a class="gallery" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
+					    	<?php } ?>
 			                     More Photos
 			                </a>
 					     <?php endforeach; ?>
