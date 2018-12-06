@@ -77,7 +77,7 @@ $contract = get_field('contract', 'collection_5');
 				   <?php } ?>
 				   <div class="clear"></div>
 				   <?php if($designerWebLink) { ?>
-			    		<a target="_blank" href="<?php echo $designerWebLink; ?>">
+			    		<a class="order-form" target="_blank" href="<?php echo $designerWebLink; ?>">
 			    	<?php } else { ?>
 				   <a class="gallery" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
 				   <?php } ?>
