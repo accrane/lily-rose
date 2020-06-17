@@ -1,136 +1,129 @@
+"use strict";
+
 /**
  *	Custom jQuery Scripts
  *	
  *	Developed by: Austin Crane	
  *	Designed by: Austin Crane
  */
-
 jQuery(document).ready(function ($) {
-	
-	/*
-	*
-	*	Current Page Active
-	*
-	------------------------------------*/
-	$("[href]").each(function() {
+  /*
+  *
+  *	Current Page Active
+  *
+  ------------------------------------*/
+  $("[href]").each(function () {
     if (this.href == window.location.href) {
-        $(this).addClass("active");
-        }
-	});
-	
-	/*
-	*
-	*	Flexslider
-	*
-	------------------------------------*/
-	$('.flexslider').flexslider({
-		animation: "slide",
-	}); // end register flexslider
-	
-	/*
-	*
-	*	Colorbox
-	*
-	------------------------------------*/
-	$('a.gallery').colorbox({
-		width: '80%', 
-		height: '80%',
-		rel:function() {        
-	        return $(this).data('rel');
-	    }
-	});
-	
-	/*
-	*
-	*	Isotope with Images Loaded
-	*
-	------------------------------------*/
-	var $container = $('#container').imagesLoaded( function() {
-  	$container.isotope({
-    // options
-	 itemSelector: '.item',
-		  masonry: {
-			gutter: 15
-			}
- 		 });
-	});
+      $(this).addClass("active");
+    }
+  });
+  /*
+  *
+  *	Flexslider
+  *
+  ------------------------------------*/
 
-	/*
-	*
-	*	Smooth Scroll to Anchor
-	*
-	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
+  $('.flexslider').flexslider({
+    animation: "slide"
+  }); // end register flexslider
 
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
-	
-	
-	/*
-	*
-	*	Equal Heights Divs
-	*
-	------------------------------------*/
-	$('.js-blocks').matchHeight();
+  /*
+  *
+  *	Colorbox
+  *
+  ------------------------------------*/
 
+  $('a.gallery').colorbox({
+    width: '80%',
+    height: '80%',
+    rel: function rel() {
+      return $(this).data('rel');
+    }
+  });
+  /*
+  *
+  *	Isotope with Images Loaded
+  *
+  ------------------------------------*/
 
-	/*
-	*
-	*	Tabs
-	*
-	------------------------------------*/
-	$('ul.tabs').each(function(){
+  var $container = $('#container').imagesLoaded(function () {
+    $container.isotope({
+      // options
+      itemSelector: '.item',
+      masonry: {
+        gutter: 15
+      }
+    });
+  });
+  /*
+  *
+  *	Smooth Scroll to Anchor
+  *
+  ------------------------------------*/
+
+  $('a').click(function () {
+    $('html, body').animate({
+      scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+    }, 500);
+    return false;
+  });
+  /*
+  *
+  *	Nice Page Scroll
+  *
+  ------------------------------------*/
+
+  $(function () {
+    $("html").niceScroll();
+  });
+  /*
+  *
+  *	Equal Heights Divs
+  *
+  ------------------------------------*/
+
+  $('.js-blocks').matchHeight();
+  /*
+  *
+  *	Tabs
+  *
+  ------------------------------------*/
+
+  $('ul.tabs').each(function () {
     // For each set of tabs, we want to keep track of
     // which tab is active and its associated content
-    var $active, $content, $links = $(this).find('a');
-
-    // If the location.hash matches one of the links, use that as the active tab.
+    var $active,
+        $content,
+        $links = $(this).find('a'); // If the location.hash matches one of the links, use that as the active tab.
     // If no match is found, use the first link as the initial active tab.
-    $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+
+    $active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
     $active.addClass('active');
+    $content = $($active[0].hash); // Hide the remaining content
 
-    $content = $($active[0].hash);
-
-    // Hide the remaining content
     $links.not($active).each(function () {
       $(this.hash).hide();
-    });
+    }); // Bind the click event handler
 
-    // Bind the click event handler
-    $(this).on('click', 'a', function(e){
+    $(this).on('click', 'a', function (e) {
       // Make the old tab inactive.
       $active.removeClass('active');
-      $content.hide();
+      $content.hide(); // Update the variables with the new link and content
 
-      // Update the variables with the new link and content
       $active = $(this);
-      $content = $(this.hash);
+      $content = $(this.hash); // Make the tab active.
 
-      // Make the tab active.
       $active.addClass('active');
-      $content.show();
+      $content.show(); // Prevent the anchor's default click action
 
-      // Prevent the anchor's default click action
       e.preventDefault();
     });
   });
+  /*
+  *
+  *	Wow Animation
+  *
+  ------------------------------------*/
 
-	/*
-	*
-	*	Wow Animation
-	*
-	------------------------------------*/
-	new WOW().init();
-
-});// END #####################################    END
+  new WOW().init();
+}); // END #####################################    END

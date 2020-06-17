@@ -80,7 +80,7 @@ $blogname = get_bloginfo('name');
 <script>
  WebFont.load({
     google: {
-      families: ['Muli:400,300:latin', 'Parisienne::latin']
+      families: ['Muli:400,300:latin', 'Montserrat:400:latin']
     }
   });
 </script>
