@@ -985,7 +985,7 @@ h1.logo{margin:20px auto 20px auto}
 .page-links{clear:both;margin:0 0 1.5em}
 section.hero{width:100%;margin:50px 0 50px 0;float:left;overflow:hidden;z-index:5;position:relative}
 section.hero img{width:100%}
-section.hero .tagline{width:auto;text-align:right;margin:0 0 20px 0;font-size:18px;font-family:"Montserrat",sans-serif}
+section.hero .tagline{width:auto;text-align:center;margin:0 0 20px 0;font-size:18px;font-family:"Montserrat",sans-serif;font-weight:bold}
 section.from-the-blog,section.instagram,section.testimonial{width:100%;position:relative;z-index:20}
 section.from-the-blog h2,section.instagram h2,section.testimonial h2{width:100%;text-align:center;margin:0 0 20px 0;font-family:"Montserrat",sans-serif;font-size:34px}
 section.from-the-blog h2 a,section.instagram h2 a,section.testimonial h2 a{text-decoration:none;color:#404040}
@@ -1125,6 +1125,7 @@ button.menu-toggle{display:none}
 #main-page{padding-top:50px}
 .logo-page-banner{top:40px}
 .social-header{margin:5px 0 0 0;float:right}
+section.hero .tagline{font-size:18px;text-align:right}
 section.hero{margin:-100px 0 50px 0}
 }@media screen and (min-width:1200px){.main-navigation ul ul li{font-size:15px}
 .main-navigation li{font-size:15px;margin:0 11px 0 0}
@@ -1133,6 +1134,7 @@ section.hero{margin:-100px 0 50px 0}
 .logo-page a,.logo-page-banner a,h1.logo a{width:230px;height:184px}
 .logo-page{margin:40px 0 0 0;position:relative}
 .logo-page-banner{top:20px;left:10%}
+section.hero .tagline{font-size:20px}
 section.hero{margin:-150px 0 50px 0}
 }@media screen and (min-width:1300px){.main-navigation ul ul li{font-size:17px}
 .main-navigation li{font-size:17px;margin:0 22px 0 0}
@@ -1140,7 +1142,10 @@ section.hero{margin:-150px 0 50px 0}
 .logo-page a,.logo-page-banner a,h1.logo a{width:230px;height:184px}
 .logo-page{margin:40px 0 0 0}
 .logo-page-banner{top:20px}
+section.hero .tagline{font-size:22px}
+section.hero .tagline{font-size:24px}
 section.hero{margin:-150px 0 50px 0}
+section.hero{font-size:24px}
 }@media screen and (min-width:midwidth){.logo-page{margin:40px 0 0 0;float:left;clear:none;position:relative}
 }@media screen and (max-width:860px){.flex-direction-nav .flex-prev{opacity:1;left:10px}
 .flex-direction-nav .flex-next{opacity:1;right:10px}

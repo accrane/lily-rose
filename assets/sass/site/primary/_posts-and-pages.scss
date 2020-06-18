@@ -47,11 +47,25 @@ section.hero {
 
 	.tagline {
 		width: auto;
-		text-align: right;
+		text-align: center;
 		margin: 0 0 20px 0;
 		font: {
 			size: 18px;
 			family: $font__heading;
+			weight: bold;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 18px;
+			text-align: right;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 20px;
+		}
+		@media screen and (min-width: $largewidth) {
+			font-size: 22px;
+		}
+		@media screen and (min-width: $largewidth) {
+			font-size: 24px;
 		}
 	}
 
@@ -66,6 +80,9 @@ section.hero {
 	}
 	@media screen and (min-width: $largewidth) {
 		margin: -150px 0 50px 0;
+	}
+	@media screen and (min-width: $largewidth) {
+		font-size: 24px;
 	}
 }
 
