@@ -39,6 +39,13 @@ jQuery(document).ready(function ($) {
 	        return $(this).data('rel');
 	    }
 	});
+	$('a.newgal').colorbox({
+		width: '80%', 
+		height: '80%',
+		rel:function() {        
+	        return $(this).data('rel');
+	    }
+	});
 	
 	/*
 	*

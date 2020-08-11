@@ -52,15 +52,31 @@ $contract = get_field('contract', 'collection_5');
 				<div class="entry-content">
 					<?php echo $desc; ?>
 				</div><!-- entry content -->
+
+				<?php if($designerWebLink) { ?>
+			    		<a class="order-form" target="_blank" href="<?php echo $designerWebLink; ?>">
+			    	<?php } else { ?>
+				   <a class="gallery" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
+				   <?php } ?>
+	                     Learn More
+	                </a>
+
+	                <div class="clear"></div>
 				<?php 
 				if( $gallery ): ?>
-					<div style="display:none;">
-					    <?php foreach( $gallery as $image ): ?>
-					    	
-					    	<a class="gallery" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
-					    	
-			                     More Photos
-			                </a>
+					<div >
+						<h3>Gallery</h3>
+					    <?php foreach( $gallery as $image ): 
+					    		// echo '<pre>';
+					    		// print_r($image);
+					    		// echo '</pre>';
+					    	?>
+					    	<div class="gallery-thumb">
+						    	<a class="newgal" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
+						    	
+				                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>">
+				                </a>
+			                </div>
 					     <?php endforeach; ?>
 				   </div><!-- display none -->
 
@@ -76,13 +92,9 @@ $contract = get_field('contract', 'collection_5');
 				   		<a target="_blank" class="order-form" href="<?php echo $oldchart; ?>">Sizing Chart Fall 2016 &amp; Before</a>
 				   <?php } ?>
 				   <div class="clear"></div>
-				   <?php if($designerWebLink) { ?>
-			    		<a class="order-form" target="_blank" href="<?php echo $designerWebLink; ?>">
-			    	<?php } else { ?>
-				   <a class="gallery" href="<?php echo $image['url']; ?>" data-rel="<?php echo $sani; ?>" >
-				   <?php } ?>
-	                     More Photos
-	                </a>
+				   
+
+
 				<?php endif; ?>
 					
 			</div><!-- designer right  -->

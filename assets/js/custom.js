@@ -40,6 +40,13 @@ jQuery(document).ready(function ($) {
       return $(this).data('rel');
     }
   });
+  $('a.newgal').colorbox({
+    width: '80%',
+    height: '80%',
+    rel: function rel() {
+      return $(this).data('rel');
+    }
+  });
   /*
   *
   *	Isotope with Images Loaded

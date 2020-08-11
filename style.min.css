@@ -933,6 +933,8 @@ html[xmlns] .flexslider .slides{display:block}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 div{-ms-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
+.gallery-thumb{width:100px;margin:3px;float:left;line-height:0}
+.gallery-thumb img{width:100%}
 .scroll-wrap{height:50px;margin:20px 0 0 0;background-color:#f38ab2}
 .scroll-banner{height:50px;line-height:50px;overflow:hidden;position:relative;color:#fff;font-size:22px}
 .scroll-banner{display:inline-block;white-space:nowrap;-webkit-animation:floatText 25s infinite linear;animation:floatText 25s infinite linear;padding-left:100%}
