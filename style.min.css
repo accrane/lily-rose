@@ -1127,7 +1127,7 @@ button.menu-toggle{display:none}
 #main-page{padding-top:50px}
 .logo-page-banner{top:40px}
 .social-header{margin:5px 0 0 0;float:right}
-section.hero .tagline{font-size:18px;text-align:right}
+section.hero .tagline{font-size:16px;text-align:right}
 section.hero{margin:-100px 0 50px 0}
 }@media screen and (min-width:1200px){.main-navigation ul ul li{font-size:15px}
 .main-navigation li{font-size:15px;margin:0 11px 0 0}
@@ -1136,7 +1136,7 @@ section.hero{margin:-100px 0 50px 0}
 .logo-page a,.logo-page-banner a,h1.logo a{width:230px;height:184px}
 .logo-page{margin:40px 0 0 0;position:relative}
 .logo-page-banner{top:20px;left:10%}
-section.hero .tagline{font-size:20px}
+section.hero .tagline{font-size:18px}
 section.hero{margin:-150px 0 50px 0}
 }@media screen and (min-width:1300px){.main-navigation ul ul li{font-size:17px}
 .main-navigation li{font-size:17px;margin:0 22px 0 0}
@@ -1144,11 +1144,11 @@ section.hero{margin:-150px 0 50px 0}
 .logo-page a,.logo-page-banner a,h1.logo a{width:230px;height:184px}
 .logo-page{margin:40px 0 0 0}
 .logo-page-banner{top:20px}
-section.hero .tagline{font-size:22px}
-section.hero .tagline{font-size:24px}
+section.hero .tagline{font-size:20px}
 section.hero{margin:-150px 0 50px 0}
 section.hero{font-size:24px}
 }@media screen and (min-width:midwidth){.logo-page{margin:40px 0 0 0;float:left;clear:none;position:relative}
+}@media screen and (min-width:1500px){section.hero .tagline{font-size:22px}
 }@media screen and (max-width:860px){.flex-direction-nav .flex-prev{opacity:1;left:10px}
 .flex-direction-nav .flex-next{opacity:1;right:10px}
 }@-webkit-keyframes bounce{from,20%,53%,80%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
