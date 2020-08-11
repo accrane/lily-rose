@@ -62,6 +62,22 @@ $contract = get_field('contract', 'collection_5');
 	                </a>
 
 	                <div class="clear"></div>
+
+
+	                <?php if( $chart != '' ) { ?>
+				   		<?php if( $postID === 177 || $postID === 179 ) { ?>
+				   			<a target="_blank" class="order-form" href="<?php echo $chart; ?>">Sizing Chart Spring 2017 &amp; After</a>
+				   		<?php } else { ?>
+				   			<a target="_blank" class="order-form" href="<?php echo $chart; ?>">Sizing Chart</a>
+				   		<?php } ?>
+				   <?php } ?>
+
+				   <?php if( $oldchart != '' ) { ?>
+				   		<a target="_blank" class="order-form" href="<?php echo $oldchart; ?>">Sizing Chart Fall 2016 &amp; Before</a>
+				   <?php } ?>
+
+				   <div class="clear"></div>
+				   
 				<?php 
 				if( $gallery ): ?>
 					<div >
@@ -80,17 +96,7 @@ $contract = get_field('contract', 'collection_5');
 					     <?php endforeach; ?>
 				   </div><!-- display none -->
 
-				   <?php if( $chart != '' ) { ?>
-				   		<?php if( $postID === 177 || $postID === 179 ) { ?>
-				   			<a target="_blank" class="order-form" href="<?php echo $chart; ?>">Sizing Chart Spring 2017 &amp; After</a>
-				   		<?php } else { ?>
-				   			<a target="_blank" class="order-form" href="<?php echo $chart; ?>">Sizing Chart</a>
-				   		<?php } ?>
-				   <?php } ?>
-
-				   <?php if( $oldchart != '' ) { ?>
-				   		<a target="_blank" class="order-form" href="<?php echo $oldchart; ?>">Sizing Chart Fall 2016 &amp; Before</a>
-				   <?php } ?>
+				   
 				   <div class="clear"></div>
 				   
 
