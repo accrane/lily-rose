@@ -135,7 +135,7 @@ $size = 'full';
 			</h2>
 			<div class="instagram-box">
 				<a href="<?php echo $link_instagram; ?>">
-					<?php echo do_shortcode('[instagram-feed]'); ?>
+					<?php echo do_shortcode('[instagram-feed feed=2]'); ?>
 				</a>
 				</div><!-- instagram box -->
 		</section>
